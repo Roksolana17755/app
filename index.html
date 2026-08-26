@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Трекер звичок</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1>Трекер звичок</h1>
+    <p>Слідкуй за своїми звичками щодня</p>
+</header>
+
+<main class="container">
+
+    <section class="stats-section">
+
+        <h2>Статистика</h2>
+
+        <div class="stats">
+
+            <div class="stat">
+                <span class="stat-number" id="total">0</span>
+                <span>Всього звичок</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number" id="doneToday">0</span>
+                <span>Виконано сьогодні</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number" id="percent">0%</span>
+                <span>Прогрес сьогодні</span>
+            </div>
+
+        </div>
+
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+
+    </section>
+
+    <section class="add-section">
+
+        <h2>Додати звичку</h2>
+
+        <form id="habitForm">
+
+            <div class="form-group">
+
+                <label for="habitInput">
+                    Назва звички
+                </label>
+
+                <input
+                    type="text"
+                    id="habitInput"
+                    placeholder="Наприклад: читати 20 хвилин"
+                >
+
+            </div>
+
+            <button type="submit">
+                Додати
+            </button>
+
+        </form>
+
+        <p id="error"></p>
+
+    </section>
+
+    <section class="controls-section">
+
+        <h2>Керування</h2>
+
+        <div class="controls">
+
+            <div>
+                <label for="filter">Фільтр:</label>
+
+                <select id="filter">
+
+                    <option value="all">Усі</option>
+                    <option value="done">Виконані сьогодні</option>
+                    <option value="notDone">Невиконані</option>
+
+                </select>
+            </div>
+
+            <div>
+                <label for="sort">Сортування:</label>
+
+                <select id="sort">
+
+                    <option value="name">За назвою</option>
+                    <option value="date">За датою створення</option>
+                    <option value="streak">За довжиною стріку</option>
+
+                </select>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="habits-section">
+
+        <h2>Мої звички</h2>
+
+        <div id="habitList"></div>
+
+        <div id="empty" class="empty">
+            Поки що звичок немає.
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>Habit Tracker</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
